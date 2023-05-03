@@ -17,7 +17,13 @@ class QuestionFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'user_id'=>rand(0,10),
+            'title' => fake()->sentence(rand(5,10)),
+            'slug' => fake()->sentence(rand(5,10)),
+            'body'=>fake()->paragraphs(rand(3,7),true),
+            'views'=>rand(0,10),
+            'answers'=>rand(0,10),
+            'votes'=>rand(-3,10),
         ];
     }
 }
